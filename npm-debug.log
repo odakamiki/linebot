@@ -2,7 +2,7 @@
 1 verbose cli [ 'Z:\\３年プログラミング\\nodejs\\\\node.exe',
 1 verbose cli   'Z:\\３年プログラミング\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'body-parser',
+1 verbose cli   '@line/bot-sdk',
 1 verbose cli   '--save' ]
 2 info using npm@1.2.14
 3 info using node@v0.10.0
@@ -13,8 +13,8 @@
 8 verbose read json Z:\３年プログラミング\src\node_modules\express\package.json
 9 verbose from cache Z:\３年プログラミング\src\package.json
 10 verbose readDependencies using package.json deps
-11 verbose cache add [ 'body-parser', null ]
-12 verbose cache add name=undefined spec="body-parser" args=["body-parser",null]
+11 verbose cache add [ '@line/bot-sdk', null ]
+12 verbose cache add name=undefined spec="@line/bot-sdk" args=["@line/bot-sdk",null]
 13 verbose parsed url { protocol: null,
 13 verbose parsed url   slashes: null,
 13 verbose parsed url   auth: null,
@@ -24,44 +24,43 @@
 13 verbose parsed url   hash: null,
 13 verbose parsed url   search: null,
 13 verbose parsed url   query: null,
-13 verbose parsed url   pathname: 'body-parser',
-13 verbose parsed url   path: 'body-parser',
-13 verbose parsed url   href: 'body-parser' }
-14 silly lockFile 14cf125c-body-parser body-parser
-15 verbose lock body-parser C:\Users\user\AppData\Roaming\npm-cache\14cf125c-body-parser.lock
-16 silly lockFile 14cf125c-body-parser body-parser
-17 silly lockFile 14cf125c-body-parser body-parser
-18 verbose addNamed [ 'body-parser', '' ]
-19 verbose addNamed [ null, '' ]
-20 silly lockFile 9f665704-body-parser body-parser@
-21 verbose lock body-parser@ C:\Users\user\AppData\Roaming\npm-cache\9f665704-body-parser.lock
-22 silly addNameRange { name: 'body-parser', range: '', hasData: false }
-23 verbose url raw body-parser
-24 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
-25 verbose url resolved https://registry.npmjs.org/body-parser
-26 info trying registry request attempt 1 at 09:17:26
-27 http GET https://registry.npmjs.org/body-parser
-28 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
-29 info trying registry request attempt 2 at 09:17:57
-30 http GET https://registry.npmjs.org/body-parser
-31 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
-32 info trying registry request attempt 3 at 09:19:18
-33 http GET https://registry.npmjs.org/body-parser
-34 silly lockFile 9f665704-body-parser body-parser@
-35 silly lockFile 9f665704-body-parser body-parser@
-36 error Error: connect ETIMEDOUT
-36 error     at errnoException (net.js:863:11)
-36 error     at Object.afterConnect [as oncomplete] (net.js:854:19)
-37 error If you need help, you may report this log at:
-37 error     <http://github.com/isaacs/npm/issues>
-37 error or email it to:
-37 error     <npm-@googlegroups.com>
-38 error System Windows_NT 6.1.7601
-39 error command "Z:\\３年プログラミング\\nodejs\\\\node.exe" "Z:\\３年プログラミング\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "body-parser" "--save"
-40 error cwd Z:\３年プログラミング\src
-41 error node -v v0.10.0
-42 error npm -v 1.2.14
-43 error syscall connect
-44 error code ETIMEDOUT
-45 error errno ETIMEDOUT
-46 verbose exit [ 1, true ]
+13 verbose parsed url   pathname: '@line/bot-sdk',
+13 verbose parsed url   path: '@line/bot-sdk',
+13 verbose parsed url   href: '@line/bot-sdk' }
+14 verbose cache add name="" spec="line/bot-sdk" args=["","line/bot-sdk"]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'line/bot-sdk',
+15 verbose parsed url   path: 'line/bot-sdk',
+15 verbose parsed url   href: 'line/bot-sdk' }
+16 silly lockFile 713b52c3-line-bot-sdk line/bot-sdk
+17 verbose lock line/bot-sdk C:\Users\user\AppData\Roaming\npm-cache\713b52c3-line-bot-sdk.lock
+18 info maybeGithub Attempting to fetch line/bot-sdk from git://github.com/line/bot-sdk
+19 silly lockFile 4c84e95d-git-github-com-line-bot-sdk git://github.com/line/bot-sdk
+20 verbose lock git://github.com/line/bot-sdk C:\Users\user\AppData\Roaming\npm-cache\4c84e95d-git-github-com-line-bot-sdk.lock
+21 verbose addRemoteGit [ 'git://github.com/line/bot-sdk', 'master' ]
+22 silly exec git "clone" "--mirror" "git://github.com/line/bot-sdk" "C:\\Users\\user\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-line-bot-sdk-4c84e95d"
+23 silly git,clone,--mirror,git://github.com/line/bot-sdk,C:\Users\user\AppData\Roaming\npm-cache\_git-remotes\git-github-com-line-bot-sdk-4c84e95d, spawning
+24 error Error: spawn ENOENT
+24 error     at errnoException (child_process.js:945:11)
+24 error     at Process.ChildProcess._handle.onexit (child_process.js:736:34)
+25 error If you need help, you may report this log at:
+25 error     <http://github.com/isaacs/npm/issues>
+25 error or email it to:
+25 error     <npm-@googlegroups.com>
+26 error System Windows_NT 6.1.7601
+27 error command "Z:\\３年プログラミング\\nodejs\\\\node.exe" "Z:\\３年プログラミング\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "@line/bot-sdk" "--save"
+28 error cwd Z:\３年プログラミング\src
+29 error node -v v0.10.0
+30 error npm -v 1.2.14
+31 error syscall spawn
+32 error code ENOENT
+33 error errno ENOENT
+34 verbose exit [ 1, true ]

@@ -3,9 +3,7 @@ var express = require("express");
 var app = express();
 app.set('view engine', 'ejs'); //追加
 // サーバーの設定
-var server = app.listen(3000, function(){
-    console.log("Node.js is listening to PORT:" + server.address().port);
-});
+var server = app.listen(process.env.PORT || 5000);
 app.get("/", function(req, res, next){ //追加
     res.render('index.ejs', {text: 'こんにちは'}); //追加
 }); //追加

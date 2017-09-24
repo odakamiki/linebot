@@ -8,31 +8,32 @@ app.get("/", function(req, res, next){ //追加
     res.render('index.ejs', {text: 'こんにちは'}); //追加
 }); //追加
 
+function getMessageText(text) {
+  var message += ' \n「' + text + '」といいましたか？';
+  return message;
+}
 
 app.get("/hello", function(req, res, next){
   var message = 'こんにちは。';
-  var hour = new Date().getHours();
+  // var hour = new Date().getHours();
+  //
+  // if(hour < 12) {
+  //   message = 'おはようございます';
+  // } else if(hour >= 16) {
+  //   message = 'こんばんは';
+  // }
+	// if(req.query.text.indexOf("斉藤")>=0){
+	// message ='斉藤さんだぞっ';
+	// }else if(req.query.text.indexOf('齋藤')>=0||
+	// 	 req.query.text.indexOf('斎藤')>=0||
+	// 	 req.query.text.indexOf('齊藤')>=0){
+	// message = '漢字が違うぞっ';
+	// }else{
+	// message = 'ぜんぜん違うぞっ';
+	// }
+  message = getMessageText(req.query.text);
 
-  if(hour < 12) {
-    message = 'おはようございます';
-  } else if(hour >= 16) {
-    message = 'こんばんは';
-  }
-	if(req.query.text.indexOf("斉藤")>=0){
-	message ='斉藤さんだぞっ';
-	}else if(req.query.text.indexOf('齋藤')>=0||
-		 req.query.text.indexOf('斎藤')>=0||
-		 req.query.text.indexOf('齊藤')>=0){
-	message = '漢字が違うぞっ';
-	}else{
-	message = 'ぜんぜん違うぞっ';
-	}
-
-
-  message += ' \n「' + req.query.text + '」といいましたか？'
   res.json(message); //'こんにちは'をmessageに書き換え
-
-
 
 });
 
@@ -42,10 +43,12 @@ const config = {
   channelSecret: '14a05618292ac080796aa15278ebcc1e'
 };
 
-app.post('/line', line.middleware(config), (req, res) => {
+app.post('/line', line.middleware(config), function(req, res) {
   Promise
     .all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result));
+    .then(function(result) {
+      res.json(result)
+    });
 });
 
 const client = new line.Client(config);
@@ -53,9 +56,9 @@ function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
     return Promise.resolve(null);
   }
-
+  var message = getMessageText(req.query.text);
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: event.message.text
+    text: message
   });
 }

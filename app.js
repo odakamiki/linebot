@@ -9,7 +9,7 @@ app.get("/", function(req, res, next){ //追加
 }); //追加
 
 function getMessageText(text) {
-  var message = ' \n「' + text + '」といいましたか？';
+  var message = '「' + text + '」といいましたか？';
   return message;
 }
 
@@ -59,6 +59,6 @@ function handleEvent(event) {
   var message = getMessageText(event.message.text);
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: event.message.text
+    text: message
   });
 }

@@ -33,27 +33,29 @@ app.get("/hello", function(req, res, next){
   res.json(message); //'こんにちは'をmessageに書き換え
 
 
-  const line = require('@line/bot-sdk');
-  const config = {
-    channelAccessToken: 'TNiyVqdOEV+Tt4SheNECr1+tQMuraIB/cecrXyJdU4m2/BWsI8q9mjbZVCB07Y6GnFvm4NGa/lOGGI4TZ8kx/ShG/TWdSJC5cM6NnurM6EwYPolW6KCcAQBp3/H/RUFGEkZoBBrCoKDHnhBst7f6TAdB04t89/1O/w1cDnyilFU=',
-    channelSecret: '14a05618292ac080796aa15278ebcc1e'
-  };
 
-  app.post('/line', line.middleware(config), (req, res) => {
-    Promise
-      .all(req.body.events.map(handleEvent))
-      .then((result) => res.json(result));
-  });
-
-  const client = new line.Client(config);
-  function handleEvent(event) {
-    if (event.type !== 'message' || event.message.type !== 'text') {
-      return Promise.resolve(null);
-    }
-
-    return client.replyMessage(event.replyToken, {
-      type: 'text',
-      text: event.message.text
-    });
-  }
 });
+
+const line = require('@line/bot-sdk');
+const config = {
+  channelAccessToken: 'TNiyVqdOEV+Tt4SheNECr1+tQMuraIB/cecrXyJdU4m2/BWsI8q9mjbZVCB07Y6GnFvm4NGa/lOGGI4TZ8kx/ShG/TWdSJC5cM6NnurM6EwYPolW6KCcAQBp3/H/RUFGEkZoBBrCoKDHnhBst7f6TAdB04t89/1O/w1cDnyilFU=',
+  channelSecret: '14a05618292ac080796aa15278ebcc1e'
+};
+
+app.post('/line', line.middleware(config), (req, res) => {
+  Promise
+    .all(req.body.events.map(handleEvent))
+    .then((result) => res.json(result));
+});
+
+const client = new line.Client(config);
+function handleEvent(event) {
+  if (event.type !== 'message' || event.message.type !== 'text') {
+    return Promise.resolve(null);
+  }
+
+  return client.replyMessage(event.replyToken, {
+    type: 'text',
+    text: event.message.text
+  });
+}

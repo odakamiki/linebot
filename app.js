@@ -56,9 +56,9 @@ function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
     return Promise.resolve(null);
   }
-  var message = getMessageText(req.query.text);
+  var message = getMessageText(event.message.text);
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: message
+    text: event.message.text
   });
 }

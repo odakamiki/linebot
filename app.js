@@ -9,7 +9,7 @@ app.get("/", function(req, res, next){ //追加
 }); //追加
 
 function getMessageText(text) {
-  var message += ' \n「' + text + '」といいましたか？';
+  var message = ' \n「' + text + '」といいましたか？';
   return message;
 }
 

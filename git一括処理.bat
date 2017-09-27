@@ -5,4 +5,3 @@ git pull
 git add .
 git commit -m "学校からのコミット"
 git push
-exit 

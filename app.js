@@ -13,7 +13,11 @@ function getMessageText(text) {
   if(text.indexOf('漢字') >= 0 ){
     message ='小高産業技術高校では毎週水曜日の国語の時間に漢字のテストがあります。'
 
-  }
+  }else  if(text.indexOf('敬え') >= 0 ){
+      message ='かしこまりました。'
+
+    }
+
   return message;
 }
 

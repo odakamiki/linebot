@@ -9,7 +9,7 @@ app.get("/", function(req, res, next){ //追加
 }); //追加
 
 function getMessageText(text) {
-  var message = '「' + text + '」といいましたか？';
+  //var message = '「' + text + '」といいましたか？';
   if(text.indexOf('漢字')){
     message ='小高産業技術高校では毎週水曜日の国語の時間に漢字のテストがあります。'
     ｝

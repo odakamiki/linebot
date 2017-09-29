@@ -21,6 +21,11 @@ function getMessageText(text) {
 
       }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
       message =hour+'時'+minute+'分'
+
+      }else if(text.indexOf('好きな'&&'ドラクエ') >= 0 ){
+    message ='7の暗さと10の賑やかさが特に好きです。'
+}
+
 }
 
   return message;

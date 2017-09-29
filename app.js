@@ -20,9 +20,9 @@ function getMessageText(text) {
         message ='金がものをいう'
 
       }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
-      message =(var)hour+'時'+(var)minute+'分'
+      message =hour+'時'+minute+'分'
 
-       }else if(text.indexOf('好きな'&&'ドラクエ') >= 0 ){
+    }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
        message ='7の暗さと10の賑やかさが特に好きです。'
        }
 

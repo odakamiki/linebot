@@ -19,7 +19,9 @@ function getMessageText(text) {
     }else if(text.indexOf('スマホゲー') >= 0 ){
         message ='金がものをいう'
 
-      }
+      }else if(text.indexOf('今の時間') >= 0 ){
+      message =hour+'時'+minute+'分'
+}
 
   return message;
 }

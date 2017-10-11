@@ -19,13 +19,13 @@ function getMessageText(text) {
 
   }else if(text.indexOf('スマホゲー') >= 0 ){
     message ='金がものをいう'
-
-  }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
-    // message =hour+'時'+minute+'分'
-
-  }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
-    message ='7の暗さと10の賑やかさが特に好きです。'
   }
+  // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
+  //   // message =hour+'時'+minute+'分'
+  //
+  // }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
+  //   message ='7の暗さと10の賑やかさが特に好きです。'
+  // }
   message = apiAccessSample();
 
 

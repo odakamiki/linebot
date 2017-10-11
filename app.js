@@ -26,7 +26,7 @@ function getMessageText(text) {
   // }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
   //   message ='7の暗さと10の賑やかさが特に好きです。'
   // }
-  message = apiAccessSample();
+  message = apiAccessSample(text);
 
 
   return message;
@@ -119,8 +119,8 @@ function replyImageSample() {
   });
 }
 
-function apiAccessSample() {
-  var phrase = 'ドーナツ';
+function apiAccessSample(text) {
+  var phrase = text;
   var list = _getPhraseFromKotohaAPI(phrase);
   var message = '';
   list.forEach(function(l) {

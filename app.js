@@ -26,12 +26,12 @@ function getMessageText(text) {
   // }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
   //   message ='7の暗さと10の賑やかさが特に好きです。'
   // }
-  message = apiAccessSample(text);
+    message = apiAccessSample(text);
 
 
-  return message;
+    return message;
+  }
 }
-
 app.get("/hello", function(req, res, next){
   var message = 'こんにちは。';
   // var hour = new Date().getHours();

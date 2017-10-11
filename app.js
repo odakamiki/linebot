@@ -12,13 +12,13 @@ app.get("/", function(req, res, next){ //追加
 function getMessageText(text) {
   var message = '「' + text + '」といいましたか？';
   if(text.indexOf('漢字') >= 0 ){
-    message ='小高産業技術高校では毎週水曜日の国語の時間に漢字のテストがあります。'
+    return'小高産業技術高校では毎週水曜日の国語の時間に漢字のテストがあります。'
 
   }else if(text.indexOf('敬え') >= 0 ){
-    message ='かしこまりました。'
+    return'かしこまりました。'
 
   }else if(text.indexOf('スマホゲー') >= 0 ){
-    message ='金がものをいう'
+    return'金がものをいう'
   }
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'

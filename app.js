@@ -26,7 +26,7 @@ function getMessageText(text) {
   }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
     message ='7の暗さと10の賑やかさが特に好きです。'
   }
-    message = apiAccessSample();
+  message = apiAccessSample();
 
 
 

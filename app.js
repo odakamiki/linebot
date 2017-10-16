@@ -25,6 +25,9 @@ function getMessageText(text) {
 
   }else if(text.indexOf('疲れた') >= 0 ){
     return'頑張ってください…！'
+
+  }else if(text.indexOf('') >= 0 ){
+    return'頑張ってください…！'
   }else{
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'

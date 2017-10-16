@@ -53,16 +53,17 @@ function getMessageText(text) {
   }else if(text.indexOf('ハロー') >= 0 ){
     return'あたいジャパニーズだからイングリッシュわからへんねん(´・ω・`)'
 
-  }else if(text.indexOf('既読無視') >= 0 ){
+  }else if(text.indexOf('未読無視') >= 0 ){
     return'しないよ！返さないこともあるけど見てるよ！！'
 
-  }else{
+  }else if(text.indexOf('既読無視') >= 0 ){
+    return''
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'
   //
-  // }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
-  //   message ='7の暗さと10の賑やかさが特に好きです。'
-  // }
+  }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
+     message ='7の暗さと10の賑やかさが特に好きです。'
+　}else{
     message = apiAccessSample(text);
 
 

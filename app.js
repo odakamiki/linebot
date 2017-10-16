@@ -20,7 +20,7 @@ function getMessageText(text) {
   }else if(text.indexOf('スマホゲー'||'スマホゲーム'||'スマートフォンゲーム') >= 0 ){
     return'金持ちが札束で殴るゲームですよね！'
 
-  }else if(text.indexOf('何歳') >= 0 ){
+  }else if(text.indexOf('何歳'||'何才') >= 0 ){
     return'なんと２ヶ月経ってないです'
 
   }else if(text.indexOf('疲れた') >= 0 ){

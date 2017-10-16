@@ -50,6 +50,12 @@ function getMessageText(text) {
   }else if(text.indexOf('何言ってるのかわからない') >= 0 ){
     return'そないなこと言わんといて…うちただのBOTやけん……'
 
+  }else if(text.indexOf('ハロー') >= 0 ){
+    return'あたいジャパニーズだからイングリッシュわからへん(´・ω・`)'
+
+  }else if(text.indexOf('既読無視') >= 0 ){
+    return'しないよ！返さないこともあるけど見てるよ！！'
+
   }else{
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'

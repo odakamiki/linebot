@@ -51,7 +51,7 @@ function getMessageText(text) {
     return'そないなこと言わんといて…うちただのBOTやけん……'
 
   }else if(text.indexOf('ハロー') >= 0 ){
-    return'あたいジャパニーズだからイングリッシュわからへん　　(´・ω・`)'
+    return'あたいジャパニーズだからイングリッシュわからへんねん(´・ω・`)'
 
   }else if(text.indexOf('既読無視') >= 0 ){
     return'しないよ！返さないこともあるけど見てるよ！！'

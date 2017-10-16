@@ -17,7 +17,7 @@ function getMessageText(text) {
   }else if(text.indexOf('敬え') >= 0 ){
     return'かしこまりました。'
 
-  }else if(text.indexOf('スマホゲー'||'スマホゲーム'||'スマートフォンゲーム') >= 0 ){
+  }else if(text.indexOf('スマホゲー') >= 0 ){
     return'金持ちが札束で殴るゲームですよね！'
 
   }else if(text.indexOf('スマホゲーム') >= 0 ){
@@ -34,6 +34,22 @@ function getMessageText(text) {
 
   }else if(text.indexOf('疲れた') >= 0 ){
     return'頑張ってください…！'
+
+  }else if(text.indexOf('こんにちは') >= 0 ){
+    return'こんにちは！'
+
+  }else if(text.indexOf('さようなら') >= 0 ){
+    return'行かないで…'
+
+  }else if(text.indexOf('バイバイ') >= 0 ){
+    return'行かないで…'
+
+  }else if(text.indexOf('またね') >= 0 ){
+    return'また絶対来てね…'
+
+  }else if(text.indexOf('何言ってるのかわからない') >= 0 ){
+    return'そないなこと言わんといて…うちただのBOTやけん……'
+
   }else{
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'

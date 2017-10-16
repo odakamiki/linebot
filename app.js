@@ -57,13 +57,13 @@ function getMessageText(text) {
     return'しないよ！返さないこともあるけど見てるよ！！'
 
   }else if(text.indexOf('既読無視') >= 0 ){
-    return''
+    return'aq'
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'
   //
-}else if(text.indexOf('好き'&&'ドラクエ') >= 1 ){
-     message ='7の暗さと10の賑やかさが特に好きです。'
-　}else{
+  }else if(text.indexOf('好き'&&'ドラクエ') >= 0 ){
+    return'7の暗さと10の賑やかさが特に好きです。'
+  }else{
     message = apiAccessSample(text);
 
 

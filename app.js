@@ -61,7 +61,7 @@ function getMessageText(text) {
   // }else if(text.indexOf('今の時間'||'今何時') >= 0 ){
   //   // message =hour+'時'+minute+'分'
   //
-  }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
+}else if(text.indexOf('好き'&&'ドラクエ') >= 1 ){
      message ='7の暗さと10の賑やかさが特に好きです。'
 　}else{
     message = apiAccessSample(text);

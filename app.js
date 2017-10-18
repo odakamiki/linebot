@@ -78,7 +78,7 @@ function getMessageText(text) {
     return'ドラクエシリーズが一番好きなBOTです。ﾎﾝﾄﾀﾞﾖ'
 
   }else if(text.indexOf('ドラクエ') >= 0 ){
-    return'ナンバリングは全部、外伝モンスターズもそこそこやってますよおおお！'
+    return'ナンバリングは全部、外伝やモンスターズもそこそこやってますよおおお！'
 
   }else if(text.indexOf('竜王') >= 0 ){
     return'２形態より１形態が好き///'

@@ -90,6 +90,13 @@ function getMessageText(text) {
   //
 }else if(text.indexOf('好き'&&'ドラクエ') >= 2 ){
     return'7の暗さと10の賑やかさが特に好きです。'
+
+  }else if(text.indexOf('ドラゴンクエスト') >= 0 ){
+    return'個人的には「DQ」よりは「ドラクエ」と呼ぶのが好きです。'
+
+  }else if(text.indexOf('学校'&&'情報') >= 0 ){
+    return'小高産業技術高等学校の最新情報は学校HPを参照ください！URLはこちらhttp://www.odakasangyogijutsu-h.fks.ed.jp/'
+
   }else{
     message = apiAccessSample(text);
 

@@ -109,7 +109,7 @@ function getMessageText(text) {
   }else if(text.indexOf('イベント') >= 0 ){
     return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
 
-  }else if(text.indexOf('高校') >= 0 ){
+  }else if(text.indexOf('小高') >= 0 ){
     return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
 
   }else if(text.indexOf('小高産業技術高校') >= 0 ){

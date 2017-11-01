@@ -123,6 +123,7 @@ function getMessageText(text) {
 
   }else if(text.indexOf('最新'&&'情報') >= 0 ){
     return'小高産業技術高等学校の最新情報は学校HPを参照ください！URLはこちらhttp://www.odakasangyogijutsu-h.fks.ed.jp/'
+
   }else{
     message = apiAccessSample(text);
 

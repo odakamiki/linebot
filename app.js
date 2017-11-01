@@ -97,6 +97,29 @@ function getMessageText(text) {
   }else if(text.indexOf('学校'&&'情報') >= 0 ){
     return'小高産業技術高等学校の最新情報は学校HPを参照ください！URLはこちらhttp://www.odakasangyogijutsu-h.fks.ed.jp/'
 
+  }else if(text.indexOf('学校行事') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('行事') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('学校') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('イベント') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('高校') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('小高産業技術高校') >= 0 ){
+    return'小高産業技術高校では商業に関すること、工業に関することが学べます！私が所属している商業科では近々販売会を行います！詳しくは「販売会」と聞いてみてください！'
+
+  }else if(text.indexOf('販売会') >= 0 ){
+    return'11月3日金曜日の午前10時から午後2時まで、小高商工会ふれあい広場にて販売会を行います！ぜひ来てください！'
+
+  }else if(text.indexOf('最新'&&'情報') >= 0 ){
+    return'小高産業技術高等学校の最新情報は学校HPを参照ください！URLはこちらhttp://www.odakasangyogijutsu-h.fks.ed.jp/'
   }else{
     message = apiAccessSample(text);
 

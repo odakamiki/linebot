@@ -140,6 +140,7 @@ function getMessageText(text) {
 
   }else if(text.indexOf('使い方') >= 0 ){
     　return'思いついた言葉をそのまま入力してください！学校関連が多めだと思います・・・'
+
   }else{
     message = apiAccessSample(text);
 

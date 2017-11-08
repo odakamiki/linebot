@@ -1,6 +1,8 @@
 // expressを読み込み
 var express = require("express");
 var request = require('sync-request');
+var fs = require('fs');
+var csvSync = require('csv-parse/lib/sync'); // requiring sync module
 var app = express();
 app.set('view engine', 'ejs'); //追加
 // サーバーの設定

@@ -124,8 +124,11 @@ function getMessageText(text) {
   }else if(text.indexOf('最新'&&'情報') >= 0 ){
     return'小高産業技術高等学校の最新情報は学校HPを参照ください！URLはこちらhttp://www.odakasangyogijutsu-h.fks.ed.jp/'
 
-  }else if(text.indexof('')>=0){
-    return''
+  }else if(text.indexof('校歌')>=0){
+    return'小高産業技術高校校歌の作曲は長渕剛さん、作詞が柳美里さんです。良い意味で校歌らしからぬ校歌で公開されたときは生徒も教師も驚いていました。'
+
+  }else if(text.indexOf('更新日') >= 0 ){
+      return'最終更新日は11月8日です'
 
   }else{
     message = apiAccessSample(text);

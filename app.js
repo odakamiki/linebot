@@ -1,6 +1,8 @@
 // expressを読み込み
 var express = require("express");
 var request = require('sync-request');
+var fs = require('fs');
+var csvSync = require('csv-parse/lib/sync'); // requiring sync module
 var app = express();
 app.set('view engine', 'ejs'); //追加
 // サーバーの設定
@@ -265,7 +267,7 @@ function getMessageTextFromCSV(text) {
     if(text.indexOf(record[0]) >= 0) {
       return true;
     } else {
-      false;
+      return false;
     }
   })
   return matchedList[0][1];

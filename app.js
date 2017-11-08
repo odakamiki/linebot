@@ -131,10 +131,10 @@ function getMessageText(text) {
     return'最終更新日は11月8日です'
 
   }else if(text.indexOf('製作者') >= 0 ){
-      return'新川とかいうやつが思いついたことを詰め込みました。'
+    return'新川とかいうやつが思いついたことを詰め込みました。'
 
 　}else if(text.indexOf('作った人') >= 0 ){
-      return'新川とかいうやつが思いついたことを詰め込みました。'
+    return'新川とかいうやつが思いついたことを詰め込みました。'
 
   }else{
     message = apiAccessSample(text);

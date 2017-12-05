@@ -281,6 +281,11 @@ function getMessageTextFromCSV(text) {
       return false;
     }
   })
-  return matchedList[0][1];
+  if(matchedList[0]) {
+    return matchedList[0][1];
+  } else {
+    return '';
+  }
+
 
 }

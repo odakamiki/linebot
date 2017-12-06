@@ -276,6 +276,7 @@ function getMessageTextFromCSV(text) {
           }
         }
       }
+      console.log('matched');
       return true;
     } else {
       return false;

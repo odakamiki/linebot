@@ -269,30 +269,18 @@ function getMessageTextFromCSV(text) {
   var res = csvSync(data);
 
   matchedList = res.filter(function(record) {
-    try {
       if(text.indexOf(record[0]) >= 0) {
         if(record.length>2){
           for(var i = 2 ; i < record.length; i++){
-            console.log("eval: " + record[i]);
-            if(record[i].length == 0 || text.indexOf(record[i]) <0){
-              console.log("keyword unmatched" + record[i])
+            if(text.indexOf(record[i]) <0){
               return false;
-            } else {
-              console.log("keyword matched: " + record[i] )
             }
           }
         }
-        console.log('matched');
         return true;
       } else {
         return false;
       }
-    } catch (e) {
-      console.log(e);
-    } finally {
-
-    }
-
   })
   if(matchedList[0]) {
     return matchedList[0][1];

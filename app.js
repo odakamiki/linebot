@@ -13,7 +13,8 @@ app.get("/", function(req, res, next){ //追加
 
 function getMessageText(text) {
   var message = '「' + text + '」といいましたか？';
-  return getMessageTextFromCSV(text);
+  message = getMessageTextFromCSV(text);
+
 //   if(text.indexOf('漢字') >= 0 ){
 //     return'小高産業技術高校では毎週水曜日の国語の時間に漢字のテストがあります。'
 //
@@ -271,8 +272,12 @@ function getMessageTextFromCSV(text) {
     if(text.indexOf(record[0]) >= 0) {
       if(record.length>2){
         for(var i = 2 ; i < record.length; i++){
+          console.log("eval: " + record[i]);
           if(text.indexOf(record[i]) <0){
+            console.log("keyword unmatched" + record[i])
             return false;
+          } else {
+            console.log("keyword matched: " + record[i] )
           }
         }
       }

@@ -273,7 +273,7 @@ function getMessageTextFromCSV(text) {
       if(record.length>2){
         for(var i = 2 ; i < record.length; i++){
           console.log("eval: " + record[i]);
-          if(record[i].length > 0 && text.indexOf(record[i]) <0){
+          if(record[i].length == 0 || text.indexOf(record[i]) <0){
             console.log("keyword unmatched" + record[i])
             return false;
           } else {
